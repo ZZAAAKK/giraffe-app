@@ -15,7 +15,7 @@ module Index =
         html [ _lang "en-UK" ] [
             head [] [
                 title []  [ encodedText "Home" ]
-                link [ _rel "stylesheet"; _type "text/css"; _href "/CSS/main.css" ]
+                link [ _rel "stylesheet"; _type "text/css"; _href "CSS/main.css" ]
             ]
             header [] [
                 TopNav.render

@@ -15,7 +15,7 @@ module CodeBlock =
         let result = 
             html [] [
                 head [] [
-                    link [ _rel "stylesheet"; _type "text/css"; _href "/CSS/CodeBlock.css" ]
+                    link [ _rel "stylesheet"; _type "text/css"; _href "CSS/CodeBlock.css" ]
                 ]
                 div [ _class "code-block" ] [ 
                     div [ _class "code-title-bar" ] [

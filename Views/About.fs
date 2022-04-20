@@ -17,7 +17,7 @@ module About =
             }
 
         div [] [
-            link [ _rel "stylesheet"; _type "text/css"; _href "/CSS/about.css" ]
+            link [ _rel "stylesheet"; _type "text/css"; _href "CSS/about.css" ]
             body [ _class "about-body" ] [
                 h1 [] [ encodedText "This is the about page." ]
                 p [] [ encodedText "This page is written using the following code:"]
