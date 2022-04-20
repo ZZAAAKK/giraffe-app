@@ -15,8 +15,6 @@
 
 	<ItemGroup>
 		<Compile Include="Models\FSO.fs" />
-		<Compile Include="Models\Folder.fs" />
-		<Compile Include="Models\File.fs" />
 		<Compile Include="Models\CodeLine.fs" />
 		<Compile Include="Models\Message.fs" />
 		<Compile Include="Views\FilePicker.fs" />

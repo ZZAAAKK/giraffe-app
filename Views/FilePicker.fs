@@ -11,7 +11,6 @@ module FilePicker =
 
     let folders = 
         [
-            root;
             models;
             views;
             handlers
@@ -19,8 +18,6 @@ module FilePicker =
 
     let files = 
         [
-            File ("Folder.fs", Some models, "", "F#");
-            File ("File.fs", Some models, "", "F#");
             File ("FSO.fs", Some models, "", "F#");
             File ("CodeLine.fs", Some models, "", "F#");
             File ("Message.fs", Some models, "", "F#");
@@ -35,16 +32,17 @@ module FilePicker =
         ]
 
     let (|GetChildren|) parent =
-        files |> Seq.filter (fun f -> f.parent = parent)
+        files |> Seq.filter (fun f -> f.parent.Value = parent)
 
     let GetFiles (files : FSO list) =
         ul [] [
             yield! 
                 files 
-                |> Seq.filter (fun fso -> fso :? File)
-                |> Seq.map (fun file -> li [] [ 
-                    match file.parent with
-                    | GetChildren a -> li [] [ ul [] [ yield! a |> Seq.map (fun f -> li [] [ encodedText f.name ]) ] ]])
+                |> Seq.filter (fun fso -> fso :? Folder)
+                |> Seq.map (fun file -> 
+                    file :?> Folder
+                    |> function
+                    | GetChildren a -> li [] [ encodedText file.name; ul [] [ yield! a |> Seq.map (fun f -> li [] [ encodedText f.name ]) ] ])
         ] 
 
     let render =
