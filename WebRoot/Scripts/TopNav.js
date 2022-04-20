@@ -3,7 +3,7 @@
 }
 
 function refreshContent(name) {
-    fetch(name)
+    fetch("giraffe-app/" + name)
         .then(data => data.text().then(result => document.getElementById('content').innerHTML = result))
         .catch(error => console.log(error));
 
