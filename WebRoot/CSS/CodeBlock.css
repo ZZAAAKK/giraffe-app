@@ -1,0 +1,28 @@
+.code-block {
+    width: max-content;
+    padding: 10px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: #11f100;
+    font-family: 'Cascadia Code';
+}
+
+    .code-block > p {
+        line-height: 10px;
+        font-size: 14px;
+    }
+
+.code-title-bar {
+    border-bottom: solid 1px white;
+    color: white;
+    height: 20px;
+}
+
+.code-title {
+    float: left;
+}
+
+.code-lang {
+    float: right;
+}
