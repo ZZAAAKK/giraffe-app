@@ -19,10 +19,10 @@ let webApp =
     choose [
         GET >=>
             choose [
-                route "/giraffe-app/" >=> ViewHandler.render ""
-                route "/giraffe-app/About" >=> ViewHandler.render "About"
-                route "/giraffe-app/Home" >=> ViewHandler.render "Home"
-                subRoute "/giraffe-app/message" (
+                route "/" >=> ViewHandler.render ""
+                route "/About" >=> ViewHandler.render "About"
+                route "/Home" >=> ViewHandler.render "Home"
+                subRoute "/message" (
                     choose [
                         routef "/%i" ViewHandler.findMessage
                     ]
