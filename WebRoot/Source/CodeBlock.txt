@@ -1,8 +1,8 @@
 ﻿namespace giraffe_app.Views
-
+ 
 open Giraffe.ViewEngine
 open System.IO
-
+ 
 module CodeBlock =
     let GetCode (path : string) =
         use sr = new StreamReader(path)

@@ -10,6 +10,7 @@ module ViewHandler =
             match viewName with
             | "About" -> About.render
             | "Home" -> Index.partial
+            | "CodeBlock" -> CodeBlock.render
             | _ -> Index.render
         htmlView view
 

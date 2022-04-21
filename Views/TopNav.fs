@@ -11,7 +11,7 @@ module TopNav =
             div [ _class "topnav"; _id "topnav" ] [
                 a [ _onclick "refreshContent('Home')"; _id "topnav-Home"; _class "nav-active" ] [ encodedText "Home" ]
                 a [ _onclick "refreshContent('About')"; _id "topnav-About" ] [ encodedText "About" ]
-                a [ _onclick "refreshContent('api/test')"; _id "topnav-test" ] [ encodedText "Code Block" ]
+                a [ _onclick "refreshContent('CodeBlock')"; _id "topnav-CodeBlock" ] [ encodedText "Code Block" ]
                 a [ _onclick "refreshContent('API')"; _id "topnav-API" ] [ encodedText "Test API" ]
                 a [ _class "icon"; _onclick "toggleTopNavModel()" ] [
                     i [ _class "fa fa-bars" ] []

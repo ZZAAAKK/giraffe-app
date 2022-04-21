@@ -23,9 +23,9 @@ module FilePicker =
             File ("Message.fs", Some models, "", "F#");
             File ("FilePicker.fs", Some views, "", "F#");
             File ("TopNav.fs", Some views, "", "F#");
-            File ("CodeBlock.fs", Some views, "", "F#");
+            File ("CodeBlock.fs", Some views, "WebRoot/Source/CodeBlock.txt", "F#");
             File ("Index.fs", Some views, "", "F#");
-            File ("About.fs", Some views, "", "F#");
+            File ("About.fs", Some views, "WebRoot/Source/about.txt", "F#");
             File ("FileStructureHandler.fs", Some handlers, "", "F#");
             File ("ViewHandler.fs", Some handlers, "", "F#");
             File ("ErrorHandler.fs", Some handlers, "", "F#")
@@ -35,7 +35,7 @@ module FilePicker =
         files |> Seq.filter (fun f -> f.parent.Value = parent)
 
     let GetFiles (files : FSO list) =
-        ul [] [
+        ul [ _class "file-picker" ] [
             yield! 
                 files 
                 |> Seq.filter (fun fso -> fso :? Folder)

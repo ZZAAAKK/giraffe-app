@@ -9,5 +9,5 @@ and Folder (name, parent) =
 
 and File(name, parent, path, language) =
     inherit FSO(name, parent)
-    member this.path = path
-    member this.language = language
+    member this.path : string = path
+    member this.language : string = language

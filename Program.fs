@@ -22,6 +22,7 @@ let webApp =
                 route "/" >=> ViewHandler.render ""
                 route "/About" >=> ViewHandler.render "About"
                 route "/Home" >=> ViewHandler.render "Home"
+                route "/CodeBlock" >=> ViewHandler.render "CodeBlock"
                 subRoute "/message" (
                     choose [
                         routef "/%i" ViewHandler.findMessage
